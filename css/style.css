@@ -153,58 +153,40 @@ hr.line {
 
 /* Specifically for community feed section */
 #community-feed {
-  position: relative;
   width: 100%;
-  height: 10vh; /* Open height */
   background-color: rgba(0, 0, 0, 0.7); /* 70% black */
-  transition: height 0.3s ease-in-out; /* Slide effect */
-  overflow: hidden; /* Hide content when collapsed */
-  margin-bottom: 0; /* Adjusted to avoid extra spacing */
+  color: #fff; /* White text */
+  padding: 10px; /* Basic padding */
 }
 
 #community-feed.hidden {
-  height: 0; /* Completely hidden when closed */
+  display: none; /* Simply hide when closed */
 }
 
 .feed-handle {
-  position: relative;
-  display: inline-block; /* Background fits text width */
-  height: 20px;
+  display: block; /* Block element for simplicity */
+  width: fit-content; /* Fit text width */
+  margin: 0 auto; /* Center horizontally */
   background-color: rgba(0, 0, 0, 0.7); /* 70% black */
   color: #fff; /* White text */
   font-size: 0.9375rem; /* 25% smaller than 1.25rem */
   font-weight: 500; /* Matches Bootstrap .card-title */
-  padding: 0 10px; /* Horizontal padding for background */
-  border-radius: 0 0 5px 5px;
-  cursor: pointer;
-  margin: 0 auto 20px; /* Centered, 20px bottom margin */
+  padding: 0 10px; /* Horizontal padding */
+  cursor: pointer; /* Indicate clickable */
   text-align: center;
-  line-height: 20px; /* Center text vertically */
-  left: 50%;
-  transform: translateX(-50%); /* Properly center */
 }
 
 .feed-content {
   padding: 10px;
-  height: 100%;
-  overflow-y: hidden; /* Disable scrollbar */
-  color: #fff; /* White text for contrast against dark background */
 }
 
+/* Ensure content inside is readable */
 .feed-content h3 {
   margin: 0 0 10px 0;
   font-size: 1.2rem;
 }
 
 @media (max-width: 768px) {
-  #community-feed {
-    height: 15vh; /* Slightly taller on mobile when open */
-  }
-  
-  #community-feed.hidden {
-    height: 0; /* Still completely hidden */
-  }
-  
   .feed-content {
     padding: 5px;
   }
