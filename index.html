@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,10 +28,18 @@
     <script type="module" src="./components/footer-pagecount.js" defer></script>
     <script src="./components/community-notify.js" defer></script>
     <script src="./components/windguru-widget.js" defer></script>
+    <script type="module" src="./components/community-feed.js" defer></script>
 </head>
 
 <body>
     <logo-header></logo-header>
+    <div id="community-feed">
+        <div class="feed-content">
+            <h3>Community Feed</h3>
+            <div id="discourse-posts"></div>
+        </div>
+    </div>
+    <div class="feed-handle">COMMUNITY FEED</div>
     <main>
         <div class="album py-4 bg-body-tertiary">
             <div class="container">
